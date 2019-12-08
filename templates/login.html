@@ -1,0 +1,55 @@
+    {% extends 'base.html' %}
+{% load staticfiles %}
+        {% block css %}
+
+
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        {% endblock css %}
+{% block header %}
+{% endblock header %}
+{% block search %}
+{% endblock search %}
+{% block body %}
+    <div class="mylogin">
+        <div >
+            <img src="{% static 'imgs/logo.png' %}" alt="" class="logo">
+        </div>
+        <div class="login">
+            <div class="left">
+                <div class="top">
+                    <form method="post" action="/user/login">
+                        {% csrf_token %}
+                    <input type="text" name="user" placeholder="您的账号" class="myInputStyle" autofocus>
+                    <input type="password" name="password" placeholder="您的密码" class="myInputStyle">
+                    <div class="Text">
+                        <p id="hint"></p>
+                        <p class="forget">忘记密码？</p>
+                    </div>
+                    <button class="myBtn">登录</button>
+                    </form>
+                </div>
+                <div class="middle">
+                    用合作网站账户直接登录
+                    <div class="other">
+                        <div><img src="{% static 'imgs/h_wb.png' %}" alt=""><p>微博</p></div>
+                        <div><img src="{% static 'imgs/h_qq.png' %}" alt=""><p>QQ</p></div>
+                        <div><img src="{% static 'imgs/h_wx.png' %}" alt=""><p>微信</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="{% static 'imgs/er.jpg' %}" alt="">
+                <p>扫一扫</p>
+                <p>下载马蜂窝APP</p>
+            </div>
+        </div>
+        <div class="bottom"><span>还没有账号？</span><a href="{% url 'user:register' %}">马上注册</a></div>
+    </div>
+
+    {% block footer %}
+{% endblock footer %}
+{% endblock body %}
+
+    {% block js %}
+    <script src="{% static 'js/login.js' %}"></script>
+    {% endblock js %}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+        {% block css %}
+		<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        {% endblock css %}
+    {% block css2 %}
+    {% endblock css2 %}
+
+	</head>
+
+	<body>
+    {% block header %}
+		<!-- 头部栏 -->
+		<header class="clearfix">
+			<!-- 头部文字 -->
+			<div class="header">
+				<div class="container">
+					<p>您好，欢迎来到爱旅行！
+                        {% if not user.is_authenticated %}
+						<a href="{% url 'user:login' %}">登录</a>
+						<a href="{% url 'user:register' %}">注册</a>
+                        {% endif %}
+					</p>
+					<ul>
+                        {% if user.is_authenticated %}
+                            {% if request.session.nickname == None %}
+                                <li>  <img height="20" width="20" src="{% static 'home/static/picture/v2-0d96d843ebe08b906f682d06ca5511.jpg' %} "></li>
+                        <li>
+							<a href="{% url 'user:userdatas' %}">未填写昵称</a>
+						</li>
+
+
+
+                         <li>
+							<a href="{% url 'user:loginout' %}">退出</a>
+						</li>
+
+                                {% else %}
+
+                              <li>  <img height="20" width="20" src="{{ request.session.portrait }}"></li>
+                          <li>
+							<a href="{% url 'user:userdatas' %}">{{ request.session.nickname }}</a>
+						</li>
+
+
+
+
+                         <li>
+							<a href="{% url 'user:loginout' %}">退出</a>
+						</li>
+                                {% endif %}
+                        {% endif %}
+						<li>
+							<a href="{% url 'user:userdatas' %}">我的旅行</a>
+						</li>
+						<li>
+							<a href="#">微信</a>
+						</li>
+						<li>
+							<a href="#">客户服务</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+{% endblock header %}
+{% block search %}
+
+			<!-- 头部栏下半部 -->
+			<div class="header-down container">
+				<img src="{% static 'img/header-img_03.gif' %}" />
+				<div class="phone">
+					<img src="{% static 'img/phone_06.gif' %}" />
+					<p>客户服务热线</p><br />
+					<i>12345678</i>
+				</div>
+				<div class="search">
+					<form action="#">
+						<select>
+							<option value="0">所有产品</option>
+							<option value="1">DIVCSS5</option>
+						</select>
+						<input class="search-text" type="text" value="目的地、主题、签证、或景区名称">
+						<div class="header-button">
+							<input type="submit" value="搜索">
+						</div>
+					</form>
+				</div>
+			</div>
+		</header>
+    {% endblock search %}
+
+ {% block body %}
+
+
+  {% endblock body %}
+
+		<!-- 底部栏 -->
+ {% block footer %}
+		<footer>
+			<div class="foot-top">
+				<div class="container">
+					<div>
+						<dl>
+							<dt>如何付款和发票</dt>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+						</dl>
+					</div>
+					<hr class="hr" />
+					<div>
+						<dl>
+							<dt>出境游和港澳游常识</dt>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+						</dl>
+					</div>
+					<hr class="hr" />
+					<div>
+						<dl>
+							<dt>预定旅游产品的问题</dt>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+						</dl>
+					</div>
+					<hr class="hr" />
+					<div>
+						<dl>
+							<dt>如何签订旅游合同</dt>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+						</dl>
+					</div>
+					<hr class="hr" />
+					<div>
+						<dl>
+							<dt>会员注册登录方式</dt>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+							<dd>
+								<a href="#">hey,yelooer</a>
+							</dd>
+						</dl>
+					</div>
+					<hr class="hr" />
+					<div>
+						<dl>
+							<dt>如何付款和发票</dt>
+							<dd>
+								<a href="#"></a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="foot-bottom container">
+				<p>Copyright © 2019 一生旅行</p>
+				<div class="clearfix">
+					<ul>
+						<li>
+							<a href="#"></a>上海旅游协会在线分会</li>
+						<li>
+							<a href="#"></a>网站备案</li>
+						<li>
+							<a href="#"></a>网络110</li>
+						<li>
+							<a href="#"></a>支付宝特约商家</li>
+						<li>
+							<a href="#"></a>AAA级信用企业</li>
+						<li>
+							<a href="#"></a>上海工商</li>
+						<li>
+							<a href="#"></a>可信网站</li>
+						<li>
+							<a href="#"></a>诚信认证</li>
+						<li>
+							<a href="#"></a>网络社会征信网</li>
+						<li>
+							<a href="#"></a>360网站安全检测</li>
+					</ul>
+				</div>
+				<span>
+					<i>友情链接：
+						<a href="#">网易旅游</a>
+						<a href="#">凤凰网旅游</a>
+						<a href="#">中国经济网</a>
+						<a href="#">雅虎旅游</a>
+						<a href="#">百度旅游</a>
+						<a href="#">人民网旅游</a>
+						<a href="#">中国制造网</a>
+						<a href="#">51766旅游网</a>
+						<a href="#">欣欣旅游网</a>
+						<a href="#">驴妈妈旅游</a>
+						<a href="#">网奇艺旅游</a>
+						<a href="#">去哪儿</a>
+						<a href="#">拉拉勾旅游</a>
+						<a href="#">米胖旅游网</a>
+						<a href="#">新华网旅游</a>
+					</i>
+
+				</span>
+			</div>
+		</footer>
+    {% endblock footer %}
+
+    {% block js %}
+    {% endblock js %}
+
+  {% block files %}
+    {% endblock files %}
+
+	</body>
+

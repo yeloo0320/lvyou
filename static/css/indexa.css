@@ -1,0 +1,216 @@
+@charset "utf-8";
+*{margin:0;padding:0}
+body{
+    font-size: 12px;
+    color: #666;
+
+}
+.container {
+    width: 1008px;
+    margin: 10px auto;
+}
+.mod{
+    margin-bottom: 30px;
+}
+.mod-1{
+    height: 30px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    line-height: 30px;
+}
+a{
+    background-color: transparent;
+    text-decoration: none;
+    color: #ff9d00;
+    cursor: pointer;
+}
+.mod .mod-1 h2{
+    width: auto;
+    color: #fb6720;
+    margin-top: 0;
+}
+.mod-1 h2{
+    float:left;
+    font-size: 24px;
+    font-weight: normal;
+    width: 180px;
+}
+.mod-1 h2 span{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.mod-1 .a1{
+    float:right;
+    font-size:12px;
+    color:#999
+}
+.mod-1 .a1 li{
+    width:14px;height:14px;
+    display:inline-block;
+    margin-right:4px;
+    vertical-align:middle
+}
+/*################һ¥ͼƬ#######*/
+.cards {
+    margin: 0 -60px 0 -20px;
+}
+.mod .item {
+    width: 238px;
+}
+.cards .item {
+    float: left;
+    width: 266px;
+    display: inline;
+    margin: 0px -15px 15px 6px;
+}
+.cards a{
+    display:block;
+    font-size:14px;
+    position:relative;
+    height:243px
+}
+.mod .item a {
+    height: 234px;
+}
+.cards a:hover {
+    text-decoration: none;
+    background-color: #f8f8f8;
+}
+.cards a {
+    display: block;
+    font-size: 14px;
+    position: relative;
+    height: 243px;
+}
+
+.cards a:hover{
+    text-decoration:none;
+    background-color:#f8f8f8
+}
+a:hover {
+    color: #ff8a00;
+}
+.mod .image {
+    height: 134px;
+}
+.cards .image {
+    height: 151px;
+    text-align: center;
+    position: relative;
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+.mod .caption{
+    padding-bottom: 18px;
+}
+.cards a:hover .caption {
+    height: 115px;
+    background-color: #f9f9f9;
+}
+.mod .caption {
+    padding-bottom: 18px;
+}
+.cards .caption {
+    border: 1px solid #f1f1f1;
+    padding: 5px 10px 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 75px;
+    background-color: #fff;
+    transition: height .2s ease-in-out .1s;
+}
+.cards a:hover h3 {
+    height: 80px;
+}
+.mod .item h3 {
+    margin-bottom: 15px;
+}
+
+.cards h3 {
+    height: 40px;
+    margin-bottom: 6px;
+    font-weight: normal;
+    color: #000;
+    line-height: 21px;
+    overflow: hidden;
+    transition: height .2s ease-in-out .1s;
+}
+.cards a:hover .caption{
+    height:115px;
+    background-color:#f9f9f9
+}
+.sales-cards a:hover h3{height:80px}
+.cards .price {
+    color: #ff8a00;
+}
+.cards .price b {
+    font-size: 22px;
+}
+.clearfix:after {
+    content: '';
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
+/*############��ʽ��###############*/
+.mod-1 .tab{
+    float: left;
+    font-size: 16px;
+    padding-left: 30px;
+}
+.mod-1 .tab li{
+    float: left;
+    display: inline;
+    margin-right: 20px;
+}
+.modp .tab .on1 {
+    background-color: #45bd9e;
+    color: #FFFFFF;
+}
+.mod-1 .tab a {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 2px;
+    color: #333;
+}
+.mod-1 .more{
+    float: right;
+    font-size: 14px;
+}
+.bn-side{
+    float: left;
+    width: 155px;
+}
+.mod-2 .mod-content{
+    flort:right;
+    width: 830px;
+}
+.mod .tab .on2 {
+    background-color: #ffb80e;
+    color: #FFFFFF;
+}
+.mod .tab .on3 {
+    background-color: #786ee6;
+    color: #FFFFFF;
+}
+.mod .tab .on4 {
+    background-color: #985eb4;
+    color: #FFFFFF;
+}
+.mod .tab .on5 {
+    background-color: #2A79FB;
+    color: #FFFFFF;
+}
+
+
+
+
+

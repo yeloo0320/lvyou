@@ -1,0 +1,52 @@
+.playtime {
+    color: #333;
+    position: relative;
+    width: 278px;
+    height: 28px;
+    line-height: 28px;
+    padding: 3px 10px;
+    border: #ccc solid 1px;
+    cursor: pointer;
+}
+.playtime input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 278px;
+    height: 28px;
+    line-height: 28px;
+    padding: 3px 10px;
+    outline: none;
+}
+.playtime i {
+    pointer-events: none;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../image/abroad-group.png);
+    background-position: -340px -180px;
+}
+.add-price-pop-box{display: none;}
+.add-price-pop-box .product-tips{font-size: 14px;color: #333;line-height: 20px; padding: 12px; background: #FFFAEE;}
+.add-price-pop-box .product-list{margin-top: 30px;}
+.add-price-pop-box .product-list li{float: left; margin:0 30px 24px 0; position: relative;}
+.add-price-pop-box .nova-tip-form{position: absolute;left: 105px;top: 35px;}
+.add-price-pop-box .word{ display: inline-block; width: 90px; margin-right: 10px; font-size: 14px; color: #666; text-align: right; }
+.add-price-pop-box .add-price-input{ width: 210px; height: 36px; line-height: 36px; font-size: 14px;padding: 0 10px;border: 1px solid #ddd;}
+.add-price-pop-box .add-starttime{ display: inline-block; width: 210px; color: #999; font-size: 14px; }
+.add-price-pop-box .add-starttime input{ width: 210px;opacity: 1; filter: alpha(opacity=1);}
+.add-price-pop-box .add-starttime .nova-tip-form{position: absolute;left: 0;top: 30px;}
+.add-price-pop-box .nova-icon-success{ display: none}
+.add-price-set-tip{ color: #333; font-size: 18px; margin: 15px 0 25px; text-align: center;}
+.add-donePrice-pop-box{ display: none; text-align: center}
+.add-price-tips-title{ margin-left: 10px; color: #999; font-size: 12px;}
+.add-price-pop-box .price-btn-box{text-align: center}
+.add-price-pop-box .js-price-btn{ display: inline-block; background: #FF8800;border-radius: 3px; width: 100px; height: 36px; line-height: 36px; color: #fff; font-size: 16px;}
+.add-price-pop-box .js-price-btn:hover{text-decoration: none; background: #f60}
+.js-price-tips:hover{color:#f60}

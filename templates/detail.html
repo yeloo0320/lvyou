@@ -1,0 +1,574 @@
+   {% extends 'base.html' %}
+{% load staticfiles %}
+
+    {% block css2 %}
+
+
+    <link rel="stylesheet" href="{% static 'static/css/index-stylesv5modulesdialog.csss.css' %}">
+    <link rel="stylesheet" href="{% static 'static/css/index-stylesv6header_new.cssstyl1.css' %}">
+    <link rel="stylesheet" href="{% static 'static/css/reductionPrice.css' %}">
+<script src="{% static 'static/js/index-jsnew_vjquery-1.7.2.min.js1.js' %}"></script>
+
+<style type="text/css">
+    .booking_float_info {
+        top: inherit;
+        bottom: 28px;
+        left: -1px;
+    }
+</style>
+{% endblock css2 %}
+
+ {% block body %}
+
+<!--页面最外层背景--开始-->
+<div class="body_bg">
+    <!--页面主体内容--开始-->
+    <div class="wrap">
+<!--面包屑--开始-->
+<div class="crumbs clearfix">
+    <div class="crumbs-link">
+        <a href="javascript:;" hidefocus="false">度假旅游</a> &gt;
+
+        	                    <span class="crumbs-list" destname="浙江" urltype="freetour" pinyin="zhejiang" destid="96"><a class="crumbs-down-a" href="javascript:;">{{ sku.type }}自由行<i class="icon_arrow"></i></a>
+
+	                    </span> &gt;
+
+
+    </div>
+</div>
+        <!--面包屑--结束-->
+
+<!--首屏产品介绍模块  开始-->
+        <div class="detail_top_all clearfix">
+
+            <!--我要吐槽-->
+
+            <!-- 产品标题 -->
+        		<h1 style="font-size:22px;line-height:30px">{{ sku.name }}</h1>
+        		<span style="color:#888;font-size:16px;line-height:22px"></span>
+         <span class="js_tip icon-level-five" tip-content="酒店精品且舒适，高端品质"></span>
+		    
+			       <span class="tagsback tagsback-orange" tip-content="驴悦亲子游，出门玩，跟妈走"><i>驴悦亲子</i></span>
+			       <span class="tagsback tagsback-orange" tip-content="自2019年11月22日起，至2019年12月31日，购买带有“驴悦亲子”标签的产品即可获赠小驴T恤一套。"><i>赠小驴T恤</i></span>
+		    
+		    
+		    
+            
+            <input type="hidden" id="currentProductId" value="600660">
+            <input type="hidden" id="currentProductName" value="2天1晚杭州临安湍口众安氡温泉度假酒店1晚">
+            <input type="hidden" id="currentCategoryId" value="18">
+            <input type="hidden" id="currentSubCategoryId" value="181">
+            <input type="hidden" id="currentUserId">
+            <p class="detail_product_num">产品编号：<span>{{ sku.id }}</span></p>
+
+            <div class="product_top_box clearfix">
+                <!--首屏右侧  开始-->
+                <div class="product_top_l">
+                    <span class="product_top_type product_type_zyx">自由行</span>
+
+                    <div class="img_scroll_all js_top_img_scroll">
+<!--                        图片-->
+                        <div class="img_scroll_box">
+                            <ul class="img_scroll_list">
+                                
+				                
+                                {% for ing in ings %}
+                                <li><img src="{{  ing.content.url }}" alt=""></li>
+                                {% endfor %}
+
+
+
+                            </ul>
+                        </div>
+
+                        <div class="img_scroll_tab">
+                            <ul class="img_scroll_tab_list">
+                            {% for ing in ings %}
+                                <li onclick="onClickTag('PC-国内景酒-详情页-产品图片-小图片及切换按钮-600660','产品图片')"><img src="{{  ing.content.url }}" alt=""></li>
+
+                            {% endfor %}
+
+
+                            </ul>
+                        </div>
+                        <span class="img_scroll_l" onclick="onClickTag('PC-国内景酒-详情页-产品图片-小图片及切换按钮-600660','产品图片')"><i class="detail_icon"></i></span>
+                        <span class="img_scroll_r" onclick="onClickTag('PC-国内景酒-详情页-产品图片-小图片及切换按钮-600660','产品图片')"><i class="detail_icon"></i></span>
+                    </div>
+
+
+                </div>
+
+                <!--首屏右侧  开始-->
+                <div class="product_top_r">
+                    <!-- 逍遥驴行 detail_icon_xiaoyao -->
+
+                    <h1 style="font-size:22px;line-height:30px">{{ sku.desc }}</h1>
+                    <div class="product-comment-box">
+                        			<span class="product-comment-scoring">
+                        				<em>4.7</em><b>分</b>
+                        			</span>
+                        			<span class="product-comment-percentage">
+                            		 	<em>96.5%</em>
+                            		 	<b>好评率</b>
+                            		</span>
+                    </div>
+                    <div class="product_top_price_box">
+                        <p class="product_top_price">
+                            <span class="price_num">
+	                                                ￥<dfn>{{ sku.price }}~{{ sku.hightprice }}</dfn>
+                            </span>起/份(2成人)
+                        </p>
+                        <p>
+							<span class="nova-icon-xs nova-icon-help"></span>
+
+
+
+
+						</p>                   
+
+
+                    </div>
+
+
+
+                    <!-- 分割线 -->
+                    <div class="product_info_hr"></div>
+                    <dl class="product_info">
+                        <dt>行程天数：</dt>
+                        <dd class="clearfix js-trip-days">
+                            <span class="trip-span active" onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-行程天数-1-2天1晚-600660','产品基本信息')">2天1晚<i class="view-icon view-icon-active"></i></span>
+							<span class="trip-span travelDays" data-value="582056" onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-行程天数-2-2天1晚-600660','产品基本信息')">3天2晚<i class="view-icon view-icon-active"></i></span>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="product_info">
+                        <dt>目&nbsp;&nbsp;的&nbsp;&nbsp;地：</dt>
+                        <dd>{{ sku.type }}</dd>
+                    </dl>
+                    
+                    
+                    
+		                    <dl class="product_info">
+		                        <dt>费用包含：</dt>
+		                        <dd>
+		                            酒店、门票
+		                        </dd>
+		                    </dl>
+                     <dl class="product_info">
+		                        <dt>景点销量：</dt>
+		                        <dd>
+		                            {{ sku.sales }}
+		                        </dd>
+		                    </dl>
+
+                    <!-- 首屏预订模块 -->
+                    <div class="product_top_booking">
+
+                    
+
+                        <dl class="product_info">
+                            <dt> </dt>
+                            <dd>
+                                <a class="preorder-confirm-button btn btn-xl btn-orange" onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-立即预订-600660','产品基本信息')">立即预订</a>
+                                <!--favorites_yes类名为已收藏样式-->
+                                <span class="favorites " onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-关注-600660','产品基本信息')"><i class="detail_icon"></i>关注</span>
+                            </dd>
+                        </dl>
+
+                    </div>
+
+                    <!-- 信用保障模块 -->
+                    <dl class="product_info">
+                		<dt>专享保障：</dt>
+                        <dd>
+                            <ul class="bz_list">
+		                        <li onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-专享保障-入住保证-600660','产品基本信息')"><i class="line_icon icon_zxbz1"></i><br>入住保证</li>
+		                        <li onclick="onClickTag('PC-国内景酒-详情页-产品基本信息-专享保障-实地踩线-600660','产品基本信息')"><i class="line_icon icon_zxbz2"></i><br>实地踩线</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div><!--首屏右侧  结束-->
+            </div>
+        </div>
+        <!--首屏产品介绍模块  结束-->
+
+
+
+
+
+
+
+
+		
+		</div>
+	</div>        
+        
+        <!-- 预订版块 开始-->
+
+                <input type="hidden" id="preorder-start-time" value="">
+	<form method="post" action="http://www.lvmama.com/vst_front/book/destbu/routeReservation.do" id="submitDataForm" accept-charset="utf-8">
+		 <input type="text" id="orderJson" name="orderJson" value="" hidden="hidden">
+	</form>	
+	
+	<!--公告模块 开始-->
+        <!--公告模块 结束-->
+        
+                 <div class="product-wrap">
+            <!--预订模块浮动导航----开始-->
+            <div id="destorder" class="tab-outer">
+                <div class="tab-dest">
+                    <ul class="ul-hor J_scrollnav">
+
+
+
+                        <li date_id="product-detail" onclick="onClickTag('PC-国内景酒-详情页-模块导航-产品详情-600660','模块导航')"><a>产品详情</a></li>
+                        <li date_id="product-travel" onclick="onClickTag('PC-国内景酒-详情页-模块导航-行程介绍-600660','模块导航')"><a>行程介绍</a></li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+
+              <div class="" id="productDetail">
+
+ 		 <!--主题活动推荐(公告)--开始-->
+        <div class="nova-tip nova-tip-warning">
+            <div class="nova-tip-close"><i></i></div>
+            <span class="nova-icon-xs nova-icon-warning"></span>
+           针对高铁出游客人：
+<br>
+<br>1.去程：千岛湖高铁站→临安湍口温泉（一趟50分钟），每日发车时间：12:30、16:00、19:00
+<br>2.回程：临安湍口温泉→千岛湖高铁站，每日发车时间：10:30、14:00、17:30
+
+        </div>
+<!--解决冲突保留开始 酌情删除 -->
+             <!--解决冲突保留结束 -->
+
+
+
+
+<!--                  产品详情-->
+            <div class="pd-section-content product-detail-instance pd-details" id="product-detail">
+                <div class="pd-title"><em><i></i><b>产品详情</b></em></div>
+
+                <div class="product_xq">
+                    <div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="{% static 'static/picture/a4a4ca1a-16c2-4156-b463-e07ecf09.jpg' %}" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/f1995b44-30cf-45a1-8a8a-08ee8b33.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/4818db9e-4956-46fe-bac3-ac7d159f.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/edc39fa4-6d32-4f1f-ae93-95bff893.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/81aff9e6-95fc-4074-821e-a86854a3.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/d382f47d-ef98-4473-9d26-725c1d7c.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/04751f9a-34e6-450e-8d4a-e8d39549.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/8377b915-4df2-4f7e-936d-cf808a4b.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/71d1d0b2-592b-470a-8667-d23119a6.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/569eac97-d600-4d4f-95e1-a5a27b39.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/248176a2-6fb4-4f99-a20a-52b4068a.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/ac57273b-a63c-4481-a647-5a07ae23.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/fe156d1a-9d35-4869-8484-d2632acb.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/79918c20-a9cd-4835-b210-94c194fc.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/23cf1977-6697-4b8b-98a0-eecc0e64.jpg" alt="" width="878"></div><div style="font-size: 0; margin-bottom: 20px;"><img style="width: 100%;" src="static/picture/4fb9726c-192e-4519-9c99-e6ece35f.jpg" alt="" width="878"></div><div style="font-size: 16px;color: #333;line-height: 24px;margin-bottom: 6px;">以上图片信息仅供参考！</div>
+                </div>
+                </div>
+
+
+
+<!--                  行程介绍<-->
+
+              <div class="product-module pd-introduction" id="product-travel">
+                <div class="pd-title"><em><i></i><b>行程介绍</b></em></div>
+                <!--行程介绍--开始-->
+                <div class="xingcheng_all">
+                    <!-- 多行程 -->
+
+                    <!--行程天数详情--开始-->
+                    <!--切换其他内容--开始-->
+                    <div class="instance_list2_box">
+                        <!-- 第1个行程 开始 -->
+                        <div class="instance_list2" style="display: block;">
+                            <!--行程天数详情--开始-->
+                            <div class="xingcheng_day">
+                                <div class="day_tab_all">
+                                    <div class="day_tab_box">
+                                        <ul class="day_tab" id="J_scrollNav1">
+                                                    <li class="active" date_id="day11">第1天</li>
+                                                    <li date_id="day12">第2天</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 供应商打包行程--开始 -->
+                                <!-- 供应商打包行程--结束 -->
+
+
+                                  <!--行程天数列表--开始-->
+                                <ul class="xingcheng">
+                                        <li id="day11">
+                                            <div class="xingcheng_tit">
+                                                <div class="day_box">
+                                                    <span class="line_icon icon_day">D1</span>
+                                                </div>
+                                                <h4>各地——临安</h4>
+                                                <i class="line_icon icon_cruise"></i>
+                                                <i class="line_icon icon_car"></i>
+                                                <i class="line_icon icon_aircraft"></i>
+                                                <i class="line_icon icon_train"></i>
+                                            </div>
+                                            <div class="day_list">
+                                                <div class="day_icon"><i class="line_icon icon_flag"></i></div>
+                                                <p>
+                                                由各地出发，自行前往临安湍口众安氡温泉度假酒店，办理入住手续，换上房间里的浴袍体验氡温泉，温泉无限次泡哦。
+<
+                                                </p>
+                                                <dl class="bg_box">
+                                                    <!--<dt class="line_icon icon_tanhao"></dt>-->
+                                                    <p><b>住宿：</b>
+                                                            含住宿(临安湍口众安氡温泉度假酒店)
+                                                    </p>
+                                                    <p><b>用餐：</b>
+                                                            晚餐(海鲜自助晚餐)&nbsp;&nbsp;
+                                                    </p>
+                                                    <p><b>交通：</b>
+                                                                其它
+                                                                    (下午茶)&nbsp;&nbsp;
+                                                    </p>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                        <li id="day12">
+                                            <div class="xingcheng_tit">
+                                                <div class="day_box">
+                                                    <span class="line_icon icon_day">D2</span>
+                                                </div>
+                                                <h4>临安——温馨的家</h4>
+                                                <i class="line_icon icon_cruise"></i>
+                                                <i class="line_icon icon_car"></i>
+                                                <i class="line_icon icon_aircraft"></i>
+                                                <i class="line_icon icon_train"></i>
+                                            </div>
+                                            <div class="day_list">
+                                                <div class="day_icon"><i class="line_icon icon_flag"></i></div>
+                                                <p>
+                                                睡到自然醒，酒店享用丰盛自助早餐，中午12：00前退房。可至市区采购一下当地特产，行程结束后返回温馨的家。
+<br>早餐：07:00-10:30
+                                                </p>
+                                                <dl class="bg_box">
+                                                    <!--<dt class="line_icon icon_tanhao"></dt>-->
+                                                    <p><b>住宿：</b>
+                                                            敬请自理
+                                                    </p>
+                                                    <p><b>用餐：</b>
+                                                            早餐(含)&nbsp;&nbsp;
+                                                    </p>
+                                                    <p><b>交通：</b>
+                                                            敬请自理
+                                                    </p>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                </ul>
+                                <!--行程天数列表--结束-->
+
+                            </div><!--行程天数详情--结束-->
+                        </div>
+                        <!-- 第3个行程 结束 -->
+                    </div>
+                    <!--切换其他内容--结束-->
+
+
+                </div>
+                <!--行程介绍--结束-->
+            </div>
+
+
+
+
+
+
+			<!--线路推荐 开始-->
+            <div class="line-recommand pd-recomment" id="lineRecomment">
+                <div class="pd-title"><em><i></i><b>线路推荐</b></em></div>
+                <div class="siderBox">
+                    <ul class="asiderPro clearfix">
+                        <li>
+                        <a class="asiderPro-img" href="" title="【超低价，吃住玩一价全包】2天1晚杭州临安湍口众安氡温泉度假酒店1晚（含双人自助早餐）＋双晚餐＋下午茶＋无限畅泡温泉＋恒温水上乐园免费观影、乐园、游泳池！" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-1-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/a28d46dc-5bfb-4bef-af05-147af617.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="" title="【超低价，吃住玩一价全包】2天1晚杭州临安湍口众安氡温泉度假酒店1晚（含双人自助早餐）＋双晚餐＋下午茶＋无限畅泡温泉＋恒温水上乐园免费观影、乐园、游泳池！" target="_blank">
+                                        【超低价，吃住玩一价全包】2天1晚杭州临安湍口众安氡温泉度假酒店1晚（含双人自助早餐）＋双晚餐＋下午茶＋无限畅泡温泉＋恒温水上乐园免费观影、乐园、游泳池！
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            96.5
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>1200</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="杭州2天1晚【下单立减30 赏宋城千古情，可多次入园】杭州宋城千古情主题酒店(西湖店)＋游宋城＋观千古情演出贵宾席" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-2-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/8f7d1a1b-86cc-4406-b1ed-3ca6ff03.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="杭州2天1晚【下单立减30 赏宋城千古情，可多次入园】杭州宋城千古情主题酒店(西湖店)＋游宋城＋观千古情演出贵宾席" target="_blank">
+                                        杭州2天1晚【下单立减30 赏宋城千古情，可多次入园】杭州宋城千古情主题酒店(西湖店)＋游宋城＋观千古情演出贵宾席
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            96.6
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>698</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="杭州特卖2天1晚【魅力西溪 玩美假期 假日房特卖】杭州西溪纳德润泽园度假酒店＋西溪湿地门票或西湖游船票加海底世界或西湖游船票加动物园、少儿乐园（三选一）＋双早" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-3-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/c20dd3b6-ad54-441f-9090-850b887b.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="杭州特卖2天1晚【魅力西溪 玩美假期 假日房特卖】杭州西溪纳德润泽园度假酒店＋西溪湿地门票或西湖游船票加海底世界或西湖游船票加动物园、少儿乐园（三选一）＋双早" target="_blank">
+                                        杭州特卖2天1晚【魅力西溪 玩美假期 假日房特卖】杭州西溪纳德润泽园度假酒店＋西溪湿地门票或西湖游船票加海底世界或西湖游船票加动物园、少儿乐园（三选一）＋双早
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            100
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>408</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="千岛湖2天1晚【享受一线湖景】千岛湖绿城度假酒店（含早）＋鱼头券／游湖／森林氧吧／骑行（景点4选1）" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-4-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/b4851d4f-9651-4bf4-bde6-3c809a98.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="千岛湖2天1晚【享受一线湖景】千岛湖绿城度假酒店（含早）＋鱼头券／游湖／森林氧吧／骑行（景点4选1）" target="_blank">
+                                        千岛湖2天1晚【享受一线湖景】千岛湖绿城度假酒店（含早）＋鱼头券／游湖／森林氧吧／骑行（景点4选1）
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            95
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>375</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="【指定房型免费升级】杭州2天1晚【轻奢之旅】杭州雷迪森铂丽大饭店含双早＋杭州乐园／云曼温泉／烂苹果乐园／杭州开元森泊度假乐园-水公园（4选1）" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-5-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/706eced8-4eb0-49b4-86f6-fc0f2e65.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="【指定房型免费升级】杭州2天1晚【轻奢之旅】杭州雷迪森铂丽大饭店含双早＋杭州乐园／云曼温泉／烂苹果乐园／杭州开元森泊度假乐园-水公园（4选1）" target="_blank">
+                                        【指定房型免费升级】杭州2天1晚【轻奢之旅】杭州雷迪森铂丽大饭店含双早＋杭州乐园／云曼温泉／烂苹果乐园／杭州开元森泊度假乐园-水公园（4选1）
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            98.2
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>950</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="千岛湖3天2晚【休闲度假，三面环湖】千岛湖伯瑞特度假酒店（含早）＋鱼头券／游湖／森林氧吧／漂流（景点4选1）" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-6-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/72cef1cf-d0ce-4b79-9c40-8055c4fe.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="千岛湖3天2晚【休闲度假，三面环湖】千岛湖伯瑞特度假酒店（含早）＋鱼头券／游湖／森林氧吧／漂流（景点4选1）" target="_blank">
+                                        千岛湖3天2晚【休闲度假，三面环湖】千岛湖伯瑞特度假酒店（含早）＋鱼头券／游湖／森林氧吧／漂流（景点4选1）
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            89.5
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>818</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="千岛湖3天2晚【‘爱’不释手在这里】千岛湖开元曼居＋鱼头券／游湖／森林氧吧／骑行／漂流（景点5选1）" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-7-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/cf9597ba-61dd-4462-b713-695cd695.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="千岛湖3天2晚【‘爱’不释手在这里】千岛湖开元曼居＋鱼头券／游湖／森林氧吧／骑行／漂流（景点5选1）" target="_blank">
+                                        千岛湖3天2晚【‘爱’不释手在这里】千岛湖开元曼居＋鱼头券／游湖／森林氧吧／骑行／漂流（景点5选1）
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            100
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>600</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                        <li>
+                        <a class="asiderPro-img" href="javascript:;" title="杭州2天1晚【冬季大促—来五星热带雨林主题酒店泡温泉】杭州第一世界大酒店＋杭州云曼温泉（成人票2张）+酒店自助双早＋泰香阁餐厅晚餐50元消费券2张" target="_blank" onclick="onClickTag('PC-国内景酒-详情页-线路推荐-8-产品名称-600660','线路推荐')">
+                                    <img width="228" height="152" src="{% static 'static/picture/2884e6d4-94c7-4294-88fb-b4ad5ecf.jpg' %}">
+                                </a>
+                                <p class="asiderPro-tit">
+                                    <a href="javascript:;" title="杭州2天1晚【冬季大促—来五星热带雨林主题酒店泡温泉】杭州第一世界大酒店＋杭州云曼温泉（成人票2张）+酒店自助双早＋泰香阁餐厅晚餐50元消费券2张" target="_blank">
+                                        杭州2天1晚【冬季大促—来五星热带雨林主题酒店泡温泉】杭州第一世界大酒店＋杭州云曼温泉（成人票2张）+酒店自助双早＋泰香阁餐厅晚餐50元消费券2张
+                                    </a>
+                                </p>
+                                <p class="asiderPro-info">
+                                    <span class="fl">
+                                        <dfn>
+                                            95.4
+                                        </dfn>%好评率
+                                    </span>
+                                    <span class="asiderPro-price">
+                                        <dfn>&yen;<i>598</i></dfn>起
+                                    </span>
+                                </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--线路推荐 结束-->
+
+
+            </div>
+            </div>
+            </div>
+        <!-- 预订版块 结束-->
+        
+
+
+    
+
+
+
+
+    
+	
+	
+
+<script src="{% static 'static/js/index-jsv6header_new.jsjsv6publi.js' %}"></script>
+<script src="{% static 'static/js/index-jslvdialog.jsjsdetaildestr.js' %}"></script>
+
+
+
+
+
+
+
+
+
+  {% endblock body %}

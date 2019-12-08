@@ -1,0 +1,30 @@
+@charset "utf-8";
+body{
+    background-image:url(../imgs/bg1.jpg);
+}
+.myInputStyle{
+    font-size: 16px;
+    padding:8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.Text{
+    height: 20px;
+}
+.myBtn{
+    background: #ffa800;
+    color:#fff;
+    font-size: 14px;
+    padding:8px;
+}
+.protocol{
+    margin-top:5px;
+    text-align: right;
+    color: #a7a4a4;
+    font-size: 12px;
+}
+
+.protocol a{
+    color: #585757;
+    text-decoration: none;
+}

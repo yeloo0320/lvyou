@@ -1,0 +1,115 @@
+@charset "utf-8";
+p{padding:0;margin:0}
+body{
+    padding: 0;margin:0;
+    background-image:url(../imgs/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#999494;
+    box-sizing: border-box;
+}
+.mylogin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:100px;
+}
+.logo{
+    width: 50px;
+}
+.login{
+    width: 600px;height:350px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+/*****左侧********/
+.left{
+    width: 60%;height:100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.top{
+    width: 95%;
+    height: 60%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.myInputStyle{
+    width: 92%;
+    font-size: 18px;
+    padding:12px;
+    border-radius: 8px;
+    border:1px solid #d8d8d8;
+    margin-bottom: 10px;
+}
+.Text{
+    color: #ffa800;
+    font-size: 14px;
+    display: flex;justify-content: space-between;
+}
+.Text p:first-child{
+    color: red;
+}
+.middle{
+    width: 95%;
+    height:30%;
+}
+.forget{
+    cursor: pointer;
+}
+.other{
+    display: flex;
+    justify-content: space-around;
+    text-align: center
+}
+.other div{
+    margin-top: 10px;
+    width:30%;
+    cursor: pointer;
+}
+
+.myBtn{
+    width: 100%;
+    background: #ffa800;
+    color:#fff;
+    font-size: 18px;
+    padding:12px;
+    border:1px solid #ffa800;
+    border-radius: 8px;
+}
+.bottom{
+    margin-top: 15px;
+    padding:5px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    color:#fff;
+    font-size: 12px;
+}
+.bottom a{
+    color: #ffa800;
+    
+}
+/*******右侧*********/
+.right{
+    width:40%;height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #d8d8d8;
+
+}
+.right img{
+ width: 90%;
+}

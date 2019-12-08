@@ -1,0 +1,118 @@
+{% extends 'person/infobase.html' %}
+{% load staticfiles %}
+{% block css2 %}
+		<link href="{% static 'home/AmazeUI-2.4.2/assets/css/admin.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'home/css/amazeui.css' %}" rel="stylesheet" type="text/css" />
+
+		<link href="{% static 'home/css/personal.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'home/css/infstyle.css' %}" rel="stylesheet" type="text/css">
+		<script src="{% static 'home/js/jquery-1.10.2.js' %}"></script>
+        <link href="{% static 'home/static/css/app.078a6629dce30838fb8a.css' %}" rel="stylesheet">
+        <link href="{% static 'home/static/css/people-routes.8a204591884ef0d2d4.css' %}" rel="stylesheet">
+{% endblock css2 %}
+
+
+ {% block main %}
+
+
+<div id="root">
+    <div>
+        <div class="LoadingBar"></div>
+
+        <main role="main" class="App-main">
+            <div class="ProfileEdit">
+                <div class="Card">
+
+                    <div class="ProfileHeader-main">
+                        <div class="UserAvatarEditor ProfileHeader-avatar">
+                            <div class="UserAvatar"><img class="Avatar Avatar--large UserAvatar-inner" width="160"
+                                                         height="160"
+
+                                                        {% if portrait == 1 %}
+                                                         src="{% static 'home/static/picture/v2-0d96d843ebe08b906f682d06ca5511.jpg' %}"
+
+                                                         srcset="{% static 'home/static/picture/v2-0d96d843ebe08b906f682d06ca5511.jpg' %} 2x">
+                                                        {% else %}
+                                                         src="{{ portrait }}"
+
+                                                         srcset="{{ portrait }} 2x">
+                                {% endif %}
+                            </div>
+
+                                <div class="Mask UserAvatarEditor-mask">
+                                    <div class="Mask-mask Mask-mask--black UserAvatarEditor-maskInner"></div>
+
+                                </div>
+                            </div>
+                        <div class="ProfileHeader-content">
+                            <div class="ProfileHeader-contentHead">
+
+                                <div class="ProfileHeader-expandActions ProfileEdit-expandActions"><a type="button"
+                                                                                                      class="Button Button--plain"
+                                                                                                      href="javascript:;">返回我的主页
+                                    <svg viewbox="0 0 10 6" class="Icon ProfileEdit-arrowIcon Icon--arrow"
+                                         style="height:16px;width:10px" width="10" height="16" aria-hidden="true">
+                                        <title></title>
+
+                                    </svg>
+                                </a></div>
+                            </div>
+                            <div class="ProfileEdit-fields">
+                                <form>
+                                   <div class="Field">
+                                    <h3 class="Field-label">用户ID</h3>
+                                    <div class="Field-content">
+                                        <div><span class="Field-text">{{ user.username }}</span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                             <div class="Field">
+                                    <h3 class="Field-label">用户名</h3>
+                                    <div class="Field-content">
+                                        <div><span class="Field-text">{{ nickname }}</span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="Field">
+                                    <h3 class="Field-label">性别</h3>
+                                    <div class="Field-content">
+                                        <div><span class="Field-text">男</span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                        <div class="Field">
+                                    <h3 class="Field-label">个性签名</h3>
+                                    <div class="Field-content">
+                                        <div><span class="Field-text">{{ autograph }}</span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                      <div class="Field">
+                                    <h3 class="Field-label">手机号</h3>
+                                    <div class="Field-content">
+                                        <div><span class="Field-text">{{ phone }}</span>
+
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                </form>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+ {% endblock main %}

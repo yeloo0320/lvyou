@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+    {% block css2 %}
+
+
+    <link href="{% static 'css/1566868943.css' %}"
+          rel="stylesheet" type="text/css">
+
+
+
+    <script type="text/javascript">
+        var __mfw_uid = parseInt('0');
+    </script>
+
+    <link href="{% static 'css/1556183379.css' %}"
+          rel="stylesheet" type="text/css">
+
+
+
+
+    <script async="" src="{% static 'js/BrowserState.js' %}" crossorigin="anonymous"></script>
+{% endblock css2 %}
+
+ {% block body %}
+
+
+
+
+<div class="container">
+
+
+    <div class="sales-content">
+    <div class="crumbs clearfix">
+    <div class="crumbs-link">
+        <a href="javascript:;" hidefocus="false">{{ country }}</a> &gt;
+
+        	                    <span class="crumbs-list" destname="浙江" urltype="freetour" pinyin="zhejiang" destid="96"><a class="crumbs-down-a" href="javascript:;">{{ skus }}<i class="icon_arrow"></i></a>
+
+	                    </span> &gt;
+
+
+    </div>
+</div>
+        <div class="sort-bar">
+            <ul>
+                <li class="sort-item">
+                    <a class="active" data-sort="smart" data-sort-type="desc" data-sort-active="smart"
+                       href="javascript:void(0);">综合排序</a>
+                </li>
+                <li class="sort-item">
+                    <a data-sort="sold_num" data-sort-type="desc" data-sort-active="sold_num"
+                       href="javascript:void(0);">近期销量优先</a>
+                </li>
+                <li class="sort-item sort-price">
+                    <div class="price-trigger">
+                        <a href="javascript:void(0);" data-sort-active="price">价格<i></i></a>
+                    </div>
+                    <ul class="drop-list hide" style="display: none;">
+                        <li><a data-sort="price" data-sort-type="asc" href="javascript:void(0);">价格从低到高</a></li>
+                        <li><a data-sort="price" data-sort-type="desc" href="javascript:void(0);">价格从高到低</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+        <div class="list-wrap" data-list="1" id="listContent" style="display: block;">
+            {% for type in types %}
+            <a class="item clearfix" href="#" target="_blank">
+             <a href="{% url 'goods:detail' type.id  %}">
+                <div class="image">
+
+                    <img src="{{ type.image.url }}" height="150" width="200">
+
+                    <span class="mark-type type-10">
+            <strong>嘉兴出发</strong>
+            <span>出境半自助游</span>
+        </span>
+                </div>
+                  </a>
+                <div class="detail">
+                    <div class="info" style="position: relative;">
+                        <p></p>
+                        <a href="{% url 'goods:detail' type.id  %}">
+                        <h3>
+
+                            {{ type.name }}
+
+                        </h3>
+                             </a>
+                        <div class="s-tag">
+                            <span>忍者王国</span>
+                            <span>深度美食体验</span>
+                            <span>松阪牛寿喜锅</span>
+                            <span>中文司导</span>
+                        </div>
+                        <p>
+                            <span class="t">班期:12/29-2020/02/28&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;店铺:&nbsp;斑马游心</span>
+                        </p>
+                    </div>
+                    <div class="extra">
+                        <div class="action">
+                            <span class="btn">立即预定</span>
+                            <div class="promo-tag">
+                            </div>
+                        </div>
+                        <span class="price"><b>￥</b><strong>{{ type.price }}</strong>起</span>
+
+                    </div>
+                </div>
+            </a>
+   {% endfor %}
+
+
+        </div>
+        <div id="list_pagination" align="right" class="m-pagination">
+            <span class="pg-current">1</span>
+            <a href="javascript:void(0);" class="pi">2</a>
+            <a href="javascript:void(0);" class="pi">3</a>
+            <a href="javascript:void(0);" class="pi">4</a>
+
+            <a href="javascript:void(0);" class="pi">...</a>
+            <a href="javascript:void(0);" class="pi pg-next">Next&gt;&gt;</a>
+        </div>
+    </div>
+    <div class="sales-side">
+        <div class="m-hotsale">
+            <h3 class="hd">本周热卖</h3>
+            <ul>
+                <li>
+                    <a href="https://www.mafengwo.cn/sales/2113684.html" target="_blank">
+                        <span class="image"><img src="{% static 'img/wKgE2l0ZZeiAJ-mnAAGl2PM9R7o53.jpeg' %}" height="70" width="100"></span>
+                        <div title="北京直飞塞班岛7天自由行（已含税费+无须支付任何小费+自助早餐+赠北部环岛游）" class="title">北京直飞塞班岛7天自由行（已含税费+无...</div>
+                        <span class="price">¥4899起</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+ {% endblock body %}
+
+
+{% block footer %}
+{% endblock footer %}

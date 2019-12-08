@@ -1,0 +1,63 @@
+{% extends 'person/infobase.html' %}
+{% load staticfiles %}
+{% block css2 %}
+		<link href="{% static 'home/AmazeUI-2.4.2/assets/css/admin.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'home/css/amazeui.css' %}" rel="stylesheet" type="text/css" />
+
+		<link href="{% static 'home/css/personal.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'home/css/infstyle.css' %}" rel="stylesheet" type="text/css">
+		<script src="{% static 'home/js/jquery-1.10.2.js' %}"></script>
+{% endblock css2 %}
+
+   {% block main %}
+    <div class="user-info">
+
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong></div>
+						</div>
+						<hr/>
+
+
+
+						<!--个人信息 -->
+						<div class="info-main">
+							<form class="am-form am-form-horizontal" method="post" action="{% url 'user:userdata' %}">
+                                {% csrf_token %}
+
+								<div class="am-form-group">
+									<label for="user-name2" class="am-form-label">昵称</label>
+									<div class="am-form-content">
+										<input type="text" name="nickname" id="user-name2" placeholder="{{ nickname}}">
+
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<label for="user-name" class="am-form-label">简介</label>
+									<div class="am-form-content">
+										<input type="text" name="autograph" id="user-name2" placeholder="{{ autograph }}">
+
+									</div>
+								</div>
+
+
+
+
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">电话</label>
+									<div class="am-form-content">
+										<input id="user-phone" name="phone" placeholder="{{ phone }}" type="tel">
+
+									</div>
+								</div>
+
+
+								<div class="info-btn">
+									<input type="submit" class="am-btn am-btn-danger"></input>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+    {% endblock main %}
